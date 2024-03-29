@@ -1,0 +1,89 @@
+OUTPUT('''Calculator Program
+
+         1.ADD
+
+         2.SUBTRACT
+
+         3.MULTIPLY
+
+         4.DIVIDE''')
+
+chosen= ""
+
+
+
+WHILE True:
+
+    SET chosen TO INPUT("Choose the operation from the given options: ")
+
+    IF chosen EQUALS "1":
+
+        SET firstNumber TO float(INPUT("Enter first number: "))
+
+        SET secondNumber TO float(INPUT("Enter second number: "))
+
+        DEFINE FUNCTION sumOfTwoNumbers(number1, number2):
+
+            RETURN number1 + number2
+
+        SET total TO (sumOfTwoNumbers(firstNumber, secondNumber))
+
+        OUTPUT(f"Sum of {firstNumber} and {secondNumber} is {total}")
+
+        break
+
+    ELSEIF chosen EQUALS "2":
+
+        SET firstNumber TO float(INPUT("Enter first number: "))
+
+        SET secondNumber TO float(INPUT("Enter second number: "))
+
+        DEFINE FUNCTION subtractOfTwoNumbers(number1, number2):
+
+            RETURN number1 - number2
+
+        SET subtract TO abs(subtractOfTwoNumbers(firstNumber, secondNumber))
+
+        OUTPUT(f"Subtract of {firstNumber} and {secondNumber} is {subtract}")
+
+        break
+
+    ELSEIF chosen EQUALS "3":
+
+        SET firstNumber TO float(INPUT("Enter first number: "))
+
+        SET secondNumber TO float(INPUT("Enter second number: "))
+
+        DEFINE FUNCTION productOfTwoNumbers(number1, number2):
+
+            RETURN number1 * number2
+
+        SET product TO (productOfTwoNumbers(firstNumber,secondNumber))
+
+        OUTPUT(f"Product of {firstNumber} and {secondNumber} is {product}")
+
+        break
+
+    ELSEIF chosen EQUALS "4":
+
+        SET firstNumber TO float(INPUT("Enter first number: "))
+
+        SET secondNumber TO float(INPUT("Enter second number: "))
+
+        DEFINE FUNCTION quotientOfTwoNumbers(number1, number2):
+
+            RETURN number1 / number2
+
+        SET quotient TO (quotientOfTwoNumbers(firstNumber, secondNumber))
+
+        OUTPUT(f"Quotient of {firstNumber} and {secondNumber} is {quotient}")
+
+        break
+
+    ELSE:
+
+        OUTPUT('''
+
+Syntax Error
+
+Please choose the operation from the given option again.''')
